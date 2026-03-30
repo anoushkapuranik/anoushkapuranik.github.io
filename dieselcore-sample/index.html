@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DieselCore - Buy & Sell Diesel Cores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav>
+    <a class="nav-logo" href="#">
+      <img src="logo.png" alt="DieselCore" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#how-it-works">Buy Core</a></li>
+      <li><a href="#how-it-works">Sell Core</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#blog">Blog</a></li>
+    </ul>
+    <button class="btn-contact" onclick="scrollToContact()">Contact Us</button>
+    <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileNav()" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════ MOBILE NAV ═══════════════ -->
+  <div class="mobile-nav" id="mobile-nav">
+    <ul class="mobile-nav-links">
+      <li><a href="#how-it-works" onclick="closeMobileNav()">Buy Core</a></li>
+      <li><a href="#how-it-works" onclick="closeMobileNav()">Sell Core</a></li>
+      <li><a href="#about" onclick="closeMobileNav()">About</a></li>
+      <li><a href="#blog" onclick="closeMobileNav()">Blog</a></li>
+    </ul>
+    <button class="btn-contact" onclick="scrollToContact(); closeMobileNav()">Contact Us</button>
+  </div>
+
+  <!-- ═══════════════ LOGO CENTRED ═══════════════ -->
+  <div class="hero-brand-centered fade-in">
+    <img src="logo.png" alt="DieselCore Logo" />
+  </div>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1 class="hero-headline fade-in fade-in-d1">
+        Buy &amp; Sell Diesel Cores;<br />Fast, Reliable, Sustainable
+      </h1>
+      <p class="hero-sub fade-in fade-in-d2">
+        Supporting remanufacturers, distributors, and fleet operators with high-quality diesel cores while reducing
+        carbon footprint through sustainable reuse.
+      </p>
+    </div>
+    <div class="hero-right fade-in fade-in-d3">
+      <img src="hero-part.png" alt="Diesel engine core" />
+    </div>
+  </section>
+
+  <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+  <section class="section-how" id="how-it-works">
+    <h2 class="section-title">How it works</h2>
+
+    <div class="tab-toggle-wrap">
+      <div class="tab-toggle">
+        <button class="tab-btn buy" id="tab-buy" onclick="switchTab('buy')">Buy Core</button>
+        <button class="tab-btn sell active" id="tab-sell" onclick="switchTab('sell')">Sell Core</button>
+      </div>
+    </div>
+
+    <!-- ── Sell Panel ── -->
+    <div class="tab-panel active" id="panel-sell">
+      <p class="tab-tagline">Turn unused diesel cores into revenue, quickly and securely.</p>
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-number-wrap">
+            <span>1</span>
+          </div>
+          <div class="step-icon-circle">
+            <img src="Automotive Generator.png" alt="Submit cores" />
+          </div>
+          <p class="step-label">Submit your cores</p>
+        </div>
+
+        <div class="step-connector">
+          <svg width="177" height="15" viewBox="0 0 177 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M175.719 8.07112C176.109 7.6806 176.109 7.04743 175.719 6.65691L169.355 0.292946C168.964 -0.0975785 168.331 -0.0975785 167.94 0.292946C167.55 0.68347 167.55 1.31664 167.94 1.70716L173.597 7.36401L167.94 13.0209C167.55 13.4114 167.55 14.0446 167.94 14.4351C168.331 14.8256 168.964 14.8256 169.355 14.4351L175.719 8.07112ZM0 7.36401V8.36401H175.011V7.36401V6.36401H0V7.36401Z"
+              fill="black" />
+          </svg>
+        </div>
+
+        <div class="step">
+          <div class="step-number-wrap">
+            <span>2</span>
+          </div>
+          <div class="step-icon-circle">
+            <img src="Evaluation.png" alt="Get evaluation" />
+          </div>
+          <p class="step-label">Get evaluation</p>
+        </div>
+
+        <div class="step-connector">
+          <svg width="177" height="15" viewBox="0 0 177 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M175.719 8.07112C176.109 7.6806 176.109 7.04743 175.719 6.65691L169.355 0.292946C168.964 -0.0975785 168.331 -0.0975785 167.94 0.292946C167.55 0.68347 167.55 1.31664 167.94 1.70716L173.597 7.36401L167.94 13.0209C167.55 13.4114 167.55 14.0446 167.94 14.4351C168.331 14.8256 168.964 14.8256 169.355 14.4351L175.719 8.07112ZM0 7.36401V8.36401H175.011V7.36401V6.36401H0V7.36401Z"
+              fill="black" />
+          </svg>
+        </div>
+
+        <div class="step">
+          <div class="step-number-wrap">
+            <span>3</span>
+          </div>
+          <div class="step-icon-circle">
+            <img src="Shipped.png" alt="Ship securely" />
+          </div>
+          <p class="step-label">Ship securely</p>
+        </div>
+
+        <div class="step-connector">
+          <svg width="177" height="15" viewBox="0 0 177 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M175.719 8.07112C176.109 7.6806 176.109 7.04743 175.719 6.65691L169.355 0.292946C168.964 -0.0975785 168.331 -0.0975785 167.94 0.292946C167.55 0.68347 167.55 1.31664 167.94 1.70716L173.597 7.36401L167.94 13.0209C167.55 13.4114 167.55 14.0446 167.94 14.4351C168.331 14.8256 168.964 14.8256 169.355 14.4351L175.719 8.07112ZM0 7.36401V8.36401H175.011V7.36401V6.36401H0V7.36401Z"
+              fill="black" />
+          </svg>
+        </div>
+
+        <div class="step">
+          <div class="step-number-wrap">
+            <span>4</span>
+          </div>
+          <div class="step-icon-circle">
+            <img src="Pay Wall.png" alt="Get paid" />
+          </div>
+          <p class="step-label">Get paid</p>
+        </div>
+
+      </div>
+      <button class="btn-green">View shipping criteria</button>
+    </div>
+
+    <!-- ── Buy Panel ── -->
+    <div class="tab-panel" id="panel-buy">
+      <p class="tab-tagline">Source high-level diesel cores at the value you need.</p>
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-number-wrap">
+            <span>1</span>
+          </div>
+          <div class="step-icon-circle">
+            <img src="Present to All.png" alt="Share requirements" />
+          </div>
+          <p class="step-label">Share requirements</p>
+        </div>
+
+        <div class="step-connector">
+          <svg width="177" height="15" viewBox="0 0 177 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M175.719 8.07112C176.109 7.6806 176.109 7.04743 175.719 6.65691L169.355 0.292946C168.964 -0.0975785 168.331 -0.0975785 167.94 0.292946C167.55 0.68347 167.55 1.31664 167.94 1.70716L173.597 7.36401L167.94 13.0209C167.55 13.4114 167.55 14.0446 167.94 14.4351C168.331 14.8256 168.964 14.8256 169.355 14.4351L175.719 8.07112ZM0 7.36401V8.36401H175.011V7.36401V6.36401H0V7.36401Z"
+              fill="black" />
+          </svg>
+        </div>
+
+        <div class="step">
+          <div class="step-number-wrap">
+            <span>2</span>
+          </div>
+          <div class="step-icon-circle">
+            <img src="Warehouse.png" alt="We match inventory" />
+          </div>
+          <p class="step-label">We match inventory</p>
+        </div>
+
+        <div class="step-connector">
+          <svg width="177" height="15" viewBox="0 0 177 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M175.719 8.07112C176.109 7.6806 176.109 7.04743 175.719 6.65691L169.355 0.292946C168.964 -0.0975785 168.331 -0.0975785 167.94 0.292946C167.55 0.68347 167.55 1.31664 167.94 1.70716L173.597 7.36401L167.94 13.0209C167.55 13.4114 167.55 14.0446 167.94 14.4351C168.331 14.8256 168.964 14.8256 169.355 14.4351L175.719 8.07112ZM0 7.36401V8.36401H175.011V7.36401V6.36401H0V7.36401Z"
+              fill="black" />
+          </svg>
+        </div>
+
+        <div class="step">
+          <div class="step-number-wrap">
+            <span>3</span>
+          </div>
+          <div class="step-icon-circle">
+            <img src="Fast Cart.png" alt="Fast fulfillment" />
+          </div>
+          <p class="step-label">Fast fulfillment</p>
+        </div>
+
+        <div class="step-connector">
+          <svg width="177" height="15" viewBox="0 0 177 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M175.719 8.07112C176.109 7.6806 176.109 7.04743 175.719 6.65691L169.355 0.292946C168.964 -0.0975785 168.331 -0.0975785 167.94 0.292946C167.55 0.68347 167.55 1.31664 167.94 1.70716L173.597 7.36401L167.94 13.0209C167.55 13.4114 167.55 14.0446 167.94 14.4351C168.331 14.8256 168.964 14.8256 169.355 14.4351L175.719 8.07112ZM0 7.36401V8.36401H175.011V7.36401V6.36401H0V7.36401Z"
+              fill="black" />
+          </svg>
+        </div>
+
+        <div class="step">
+          <div class="step-number-wrap">
+            <span>4</span>
+          </div>
+          <div class="step-icon-circle">
+            <img src="Trolley.png" alt="Delivered to you" />
+          </div>
+          <p class="step-label">Delivered to you</p>
+        </div>
+
+      </div>
+      <button class="btn-green">View core criteria</button>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════ WHY DIESELCORE ═══════════════ -->
+  <section class="section-why" id="about">
+    <h2 class="section-title">Why DieselCore</h2>
+
+    <div class="why-cards">
+      <div class="why-card">
+        <img src="carbon_sustainability.png" alt="Sustainability icon" />
+        <div class="why-card-body">
+          <p class="why-card-title">Sustainability</p>
+          <p class="why-card-desc">Upcycled diesel cores reduce the need for new manufacturing and support a circular
+            economy.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <img src="carbon_industry.png" alt="Industry icon" />
+        <div class="why-card-body">
+          <p class="why-card-title">Extensive supply network</p>
+          <p class="why-card-desc">Access consistent, high-quality cores across automotive, agricultural, and industrial
+            sectors.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <img src="package-process.png" alt="Process icon" />
+        <div class="why-card-body">
+          <p class="why-card-title">Streamlined process</p>
+          <p class="why-card-desc">Our reverse ecommerce model makes buying and selling cores quick, easy, and
+            efficient.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-green" id="contact">Get started</button>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer id="blog">
+    <div class="footer-main">
+
+      <!-- Left: Logo + Social -->
+      <div class="footer-brand">
+        <img class="footer-brand-logo" src="logo.png" alt="DieselCore" />
+        <div class="footer-social">
+          <p class="footer-social-title">Let's get social</p>
+          <div class="footer-social-icons">
+            <img src="mdi_linkedin.png" alt="LinkedIn" />
+            <img src="ic_baseline-facebook.png" alt="Facebook" />
+            <img src="mdi_twitter.png" alt="Twitter" />
+            <img src="mdi_youtube.png" alt="YouTube" />
+            <img src="ri_instagram-fill.png" alt="Instagram" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Link columns -->
+      <div class="footer-cols">
+        <div class="footer-col">
+          <p class="footer-col-title">Services</p>
+          <div class="footer-col-links">
+            <p>Sell Core</p>
+            <p>Shipping criteria</p>
+            <p>Buy Core</p>
+            <p>Core criteria</p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Company</p>
+          <div class="footer-col-links">
+            <p>About us</p>
+            <p>Blog</p>
+            <p>Newsletter signup</p>
+            <p>Sitemap</p>
+            <p>Privacy Policy</p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Address</p>
+          <div class="footer-col-links">
+            <p>2055 Discovery<br />Hills Parkway<br />Brookshire, TX 77423</p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Support</p>
+          <div class="footer-col-links">
+            <p>Contact:</p>
+            <p>1-713-849-5302</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-copy">Copyright © 2026 DieselCore, LLC All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
